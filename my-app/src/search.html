@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UniTrade</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/search-style.css" />
+
+    <!-- Font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- Font link -->
+
+    <!-- Icon link-->
+    <script src="https://kit.fontawesome.com/6bf1309b07.js" crossorigin="anonymous"></script>
+    <!-- Icon link-->
+
+    <script type="module" src="./js/system/search.js"></script>
+
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body>
+    <div class="search">
+      <div class="row1">
+        <div class="col1">
+          <a href="home.html"><i class="fa-solid fa-arrow-left" id="arrow"></i></a>
+          <form class="d-flex" id="search-form">
+            <input 
+            class="form-control"
+            type="text"
+            list="datalistOptions"
+            name="keyword"
+            id="search-bar" 
+            placeholder="Search Product">
+            <button id="search_btn" type="submit"><i class="fa-solid fa-magnifying-glass" id="magnifying"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="row2">
+        <p>Search history</p>
+      </div>
+    </div>
+  </body>
+</html>

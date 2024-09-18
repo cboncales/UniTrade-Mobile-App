@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UniTrade</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/wishlist-style.css" />
+
+    <link rel="stylesheet" href="./css/home-style.css" />
+
+    <!-- Font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- Font link -->
+
+    <!-- Icon link-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/6bf1309b07.js" crossorigin="anonymous"></script>
+    <!-- Icon link-->
+
+    <script type="module" src="./js/system/wishlist.js"></script>
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body>
+    <nav class="navbar sticky-top" id="navbar">
+      <!-- Top Navbar -->
+      <div class="" id="top-navbar">
+        <div class="col-3 p-0" id="col1">
+          <a class="navbar-brand" href="#" id="logo"><img class="logo mb-2 mr-2 pb-2" src="assets/imgs/unitrade-logo.png" alt="" width="35px" ><span>Uni</span>Trade</a>
+        </div>
+        <div class="col-5 d-inline d-flex align-items-center justify-content-around" id="col2">
+          <a class="search" href="search.html"><i class="fa-solid fa-magnifying-glass" id="magnifying"></i><span>Search</span></a>
+          <button class="navbar-toggler" id="menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span id="menu"><i class="fa-solid fa-bars" id="menu-icon"></i><p>Menu</p></span>
+          </button>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h1 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h1>
+            <button type="button" class="btn-close fs-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="menu-bar">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="account.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Account</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">
+                    <i class="fa-solid fa-users"></i>
+                    <span>About Us</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="btn_logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Log out</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Top Navbar -->
+
+    <!-- Bot Navbar -->
+      <div class="bot-container">
+        <nav class="bot-navbar">
+          <ul>
+            <a href="home.html"><li class="shop"><i class="fa-solid fa-shop"></i><span>Shop</span></li></a>
+            <a href="profile.html"><li class="profile"><i class="fa-solid fa-user"></i><span>Profile</span></li></a>
+            <a class="active" href="wishlist.html"><li class="wishlist"><i class="fa-solid fa-heart"></i><span>Wishlist</span></li></a>
+            <a href="notification.html"><li class="notification"><i class="fa-solid fa-bell"></i><span>Notification</span></li></a>
+          </ul>
+        </nav>
+      </div>
+    <!-- Bot Navbar -->
+    </nav>
+
+       <!--alert notification-->
+       <div class="alert alert-success d-none" role="alert"> </div>
+       <div class="alert alert-danger d-none" role="alert"> </div>
+       <!--end of notification-->
+       
+    
+       <div id="wishlist_data" class="row"></div>
+
+
+    <!--  FOOTER -->
+    <a href="wishlist.html" class="arrow"><i><img src="assets/imgs/arrow.png" alt=""></i></a>
+    <!--  FOOTER -->
+  </body>
+</html>

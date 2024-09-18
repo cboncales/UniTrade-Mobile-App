@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UniTrade</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/profile-style.css" />
+
+    <!-- Fonts Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fonts Link -->
+
+    <!-- JS links -->
+    <script type="module" src="./js/system/stalk.js"></script>
+    <!--<script type="module" src="./js/system/user.js"></script> -->
+
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body>
+    <nav class="navbar sticky-top" id="navbar">
+      <!-- Top Navbar -->
+      <div class="" id="top-navbar">
+        <div class="col-3 p-0" id="col1">
+          <a class="navbar-brand" href="#" id="logo"><img class="logo mb-2 mr-2 pb-2" src="assets/imgs/unitrade-logo.png" alt="" width="35px" ><span>Uni</span>Trade</a>
+        </div>
+        <div class="col-5 d-inline d-flex align-items-center justify-content-around" id="col2">
+          <a class="search" href="search.html"><i class="fa-solid fa-magnifying-glass" id="magnifying"></i><span>Search</span></a>
+          <button class="navbar-toggler" id="menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span id="menu"><i class="fa-solid fa-bars" id="menu-icon"></i><p>Menu</p></span>
+          </button>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h1 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h1>
+            <button type="button" class="btn-close fs-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="menu-bar">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="account.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Account</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">
+                    <i class="fa-solid fa-users"></i>
+                    <span>About Us</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="btn_logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Log out</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Navbar -->
+
+      <!-- Bottom Navbar -->
+      <div class="bot-container">
+        <nav class="bot-navbar">
+          <ul>
+            <a href="home.html"><li class="shop"><i class="fa-solid fa-shop"></i><span>Shop</span></li></a>
+            <a class="active" href="profile.html"><li class="profile"><i class="fa-solid fa-user"></i><span>Profile</span></li></a>
+            <a href="wishlist.html"><li class="wishlist"><i class="fa-solid fa-heart"></i><span>Wishlist</span></li></a>
+            <a href="notification.html"><li class="notification"><i class="fa-solid fa-bell"></i><span>Notification</span></li></a>
+          </ul>
+        </nav>
+      </div>
+      <!-- Bottom Navbar -->
+    </nav>
+
+    <!-- Alert Notification -->
+    <div class="alert alert-success d-none" role="alert"></div>
+    <div class="alert alert-danger d-none" role="alert"></div>
+    <!-- End of Notification -->
+
+    <!-- User Profile Data -->
+    <div class="header__wrapper" id="profile">
+
+      <header id="background-pic">
+      </header>
+      <div class="cols__container">
+        <div class="left__col" id="get_data">
+          <!-- User information will be inserted here by JavaScript -->
+        </div>
+
+        <!-- User Posts -->
+        <div class="right__col">
+          <nav>
+            <ul>
+                <li>
+                  <a href="">Products</a>
+                </li>
+            </ul>
+          </nav>
+          <div class="row" id="get_posts">
+          
+          <!-- User posts will be inserted here by JavaScript -->
+          </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!--
+    <div class="header__wrapper" id="profile">
+      <header>
+      </header>
+      <div class="cols__container">
+        
+        <div class="left__col">
+          <div class="img__container">
+            <img src="assets/imgs/shrek.jpg" alt="">
+            <span></span>
+          </div>
+          <br><br>
+          <h3>gg mon</h3>
+
+          <ul class="about">
+            <li><span>1.7M</span>Followers</li>
+            <li><span>9</span>Following</li>
+            <li><span>5.2M</span>Visits</li>
+          </ul>
+
+          <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio voluptas voluptatum tempora incidunt, sint voluptates? Quaerat corrupti explicabo ratione tempora fuga illum, repudiandae a sequi aliquid nulla fugiat veniam temporibus.</p>
+
+            <ul>
+              <li><i class="fab fa-twitter"></i></li>
+              <li><i class="fab fa-facebook"></i></li>
+              <li><i class="fab fa-telegram"></i></li>
+              <li><i class="fab fa-instagram"></i></li>
+            </ul>
+
+           <a href="account.html"><button>Edit Profile</button></a>
+          </div>
+        </div>
+
+
+        <div class="right__col">
+          <nav>
+            <ul>
+              <li><a href="">Products</a></li>
+            </ul>
+          </nav>
+
+          <div class="row">
+            <div class="col col-md-6 py-3 mt-3 py-md-0">
+              <div class="card">
+                  <img src="assets/imgs/iphone13.jpg" alt="">
+                  <div class="card-body">
+                      <h3 class="text-center">iPhone 13</h3>
+                      <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                      <div class="star text-center">
+                          <i class="fa-solid fa-star checked"></i>
+                          <i class="fa-solid fa-star checked"></i>
+                          <i class="fa-solid fa-star checked"></i>
+                          <i class="fa-solid fa-star checked"></i>
+                          <i class="fa-solid fa-star checked"></i>
+                      </div>
+                      <h2>P74,000</h2>
+                      <div class="card-bot">
+                        <button type="button" class="btn btn-warning" onclick="window.location.href='product.html'">View Product</button>
+                        <i class="wishlist fa-solid fa-heart"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col col-md-6 col-xs-5 py-3 mt-3 py-md-0">
+            <div class="card">
+                <img src="assets/imgs/polo1.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="text-center">Polo</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                    <div class="star text-center">
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                        <i class="fa-solid fa-star checked"></i>
+                    </div>
+                    <h2>P1,000</h2>
+                    <div class="card-bot">
+                      <button type="button" class="btn btn-warning" onclick="window.location.href='product.html'">View Product</button>
+                      <i class="wishlist fa-solid fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+  </body>
+</html>

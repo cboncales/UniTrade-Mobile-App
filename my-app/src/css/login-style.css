@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg, rgb(255, 153, 0) 0%, rgba(255, 153, 0) 35%, rgba(255, 153, 0) 100%);
+    font-family: 'Poppins', sans-serif;
+
+}
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+form{
+    border-radius: 20px;
+    margin-top: 150px !important;
+    width: 24% !important;
+    background-color: #f5f5f5 !important;
+    padding: 50px;
+}
+
+.btn{
+    width: 100%;
+    border: none;
+    background-color: #FDA403 !important;
+    transition: all 0.2s ease !important;
+}
+.btn:active{
+    transform: scale(0.90) !important;
+}
+
+.form-control{
+    color: rgba(0,0,0,.87);
+    border-bottom-color: rgba(0,0,0,.42);
+    box-shadow: none !important;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+    }
+ h4{
+    font-size: 2rem !important;
+    font-weight: 700;
+    color: #FDA403 !important;
+    border-bottom: 1px solid #FDA403;
+ }  
+ .form-label{
+    font-weight: 800 !important;
+    color: #FDA403 !important;
+ }
+ .option{
+    display: flex;
+    justify-content: space-between;
+ }
+ .rem{
+    font-size: 15px;
+ }
+ .signup a{
+    text-decoration: none;
+ }
+ #emailHelp{
+    margin: 0 !important;
+ }
+ @media only screen and (max-width: 390px){
+    .logo{
+        width: 100%;
+    }
+ }
+@media only screen and (max-width: 700px) {
+    .logo{
+        height: 200px;
+    }
+    form {
+        padding: 20px;
+        margin-top: 0 !important;
+        width: 100% !important;
+    }
+    .btn{
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .logo{
+        height: 300px;
+        width: 85%;
+    }
+    form{
+        margin-top: 0 !important;
+        width: 80% !important;
+    }
+    .form-control{
+        height: 55px;
+        font-size: 30px;
+    }
+    h4{
+        font-size: 55px !important;
+    }
+    .btn{
+        font-size: 30px !important;
+    }
+    .form-label{
+        font-size: 27px;
+    }
+    .option{
+        font-size: 20px;
+    }
+    #emailHelp{
+        font-size: 20px;
+    }
+    .rem{
+        font-size: 20px;
+    }
+    .signup small{
+        font-size: 20px;
+    }
+}

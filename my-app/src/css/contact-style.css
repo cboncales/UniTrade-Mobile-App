@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: linear-gradient(90deg,#E8751A 0%, #E8751A 30%, #FDA403 30%, #FDA403 100%);
+}
+.contact {
+    background-color: #f7f7f7;
+}
+.contactUs{
+    position: relative;
+    width: 100%;
+    padding: 40px 100px;
+}
+.contactUs .title{
+    display: relative;
+    left: 0;
+    font-size: 2.5em;
+}
+.contactUs .title a{
+    font-size: 0.7em;
+    color: #ffff;
+    transition: all 0.1s ease;
+    text-shadow: 1px 1px 1px black;
+}
+.contactUs .title a:active{
+    transform: scale(0.90);
+}
+.contactUs .title h2{
+    position: absolute;
+    top: 2.1%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-weight: 500;
+    font-size: 0.75em;
+    text-shadow: 1px 1px 1px black;
+}
+.form{
+    grid-area: form;
+}
+.info{
+    grid-area: info;
+}
+.map{
+    grid-area: map;
+}
+.contact{
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+}
+.box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    grid-gap: 20px;
+    margin-top: 10px;
+}
+.contact h3{
+    color: #FDA403;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Form */
+.formBox{
+    position: relative;
+    width: 100%;
+}
+.formBox .row50{
+    display: flex;
+    gap: 20px;
+}
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.formBox .row100 .inputBox{
+    width: 100%;
+}
+.inputBox span{
+    color: #FDA403;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.inputBox input{
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid #333;
+}
+.inputBox .btn{
+    text-shadow: 1px 1px 1px black;
+}
+.inputBox textarea{
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid #333;
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+}
+.inputBox input[type="Submit"]{
+    background: #FDA403;
+    color: #fff;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+    transition: all 0.2s ease;
+}
+.inputBox input[type="Submit"]:active{
+    transform: scale(0.90);
+}
+.inputBox ::placeholder{
+    color: #999;
+}
+
+/* Form */
+
+/* Info */
+.info{
+    background: #E8751A;
+}
+.info h3{
+    color: #fff;
+}
+.info .infoBox div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.info .infoBox div span{
+    min-width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #FDA403;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.info .infoBox div p{
+    color: #fff;
+    font-size: 1.1em;
+}
+.info .infoBox div a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.sci{
+    margin-top: 40px;
+    display: flex;
+}
+.sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+.sci li a{
+    color: #fff;
+    font-size: 2em;
+    color: #fff;
+}
+.sci li a:hover{
+    color: #fff;
+}
+.map{
+    padding: 0;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* Info */
+
+
+/* Responsive Design */
+@media (max-width: 1024px){
+    @media (max-width: 1024px){
+        body{
+            background: #FDA403 !important;
+        }
+        .contactUs{
+            padding: 20px;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            gap: 20px; 
+            margin-top: 10px;
+        }
+        .formBox .row50{
+            display: flex;
+            flex-direction: column; 
+            gap: 20px;
+        }
+        .inputBox{
+            width: 100%;
+        }
+        .contact{
+            padding: 30px;
+        }
+        .map {
+            padding: 0 !important;
+            height: 200px;
+            overflow: hidden;
+        }
+    
+        .map iframe {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    
+}
+@media (max-width: 340px){
+    .contact{
+        padding: 10px !important;
+    }
+    .contact h3{
+        font-size: 1em !important;
+    }
+    .title{
+        display: flex;
+    }
+    .title h2 {
+        font-size: 0.5em !important; 
+    }
+    
+    #arrow {
+        font-size: 0.7em !important; 
+    }
+
+    .infoBox div span {
+        font-size: 1em !important; 
+    }
+
+    .infoBox div p {
+        font-size: 0.7em !important; 
+    }
+
+    .infoBox div a {
+        font-size: 0.8em !important;
+    }
+
+    .sci li a {
+        font-size: 1.3em !important; 
+    }
+
+    .inputBox input[type="submit"] {
+        font-size: 85%; 
+        width: 40%;
+        height: 20%;
+    }
+    .map {
+        height: 200px; 
+        overflow: hidden; 
+    }
+
+    .map iframe {
+        height: 100%; 
+        width: 100%; 
+    }
+}
+
+  
+

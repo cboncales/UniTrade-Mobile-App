@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UniTrade</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/signup-style.css" />
+
+    <!-- Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fonts link -->
+
+    <!--<script type="module" src="./js/main.js"></script> -->
+    <script type="module" src="./js/auth/signup.js"></script>
+
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body class="body">
+    <div class="container-fluid">
+      <div class="logo-wrapper">
+        <img class="logo text-center" src="assets/imgs/signup-bg.png" alt="Unitrade">
+      </div>
+      <!--alert notification-->
+      <div class="alert alert-success d-none" role="alert"> </div>
+      <div class="alert alert-danger d-none" role="alert"> </div>
+      <!--end of notification-->
+      <form class="mx-auto mb-5" id="form_signup" action="">
+          <h4 class="text-center">Sign-up</h4>
+          <!--firstname-->
+          <div class="mb-3 mt-5">
+            <label for="exampleInputFirstName1" class="form-label">First Name</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            name="first_name" id="first_name" 
+            autocomplete="first_name" 
+            placeholder="Enter First Name" 
+            aria-describedby="emailHelp" 
+            required>
+          </div>
+          <!--end of firstname-->
+
+           <!--lastname-->
+          <div class="mb-3">
+            <label for="exampleInputLastName1" class="form-label">Last Name</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            name="last_name" 
+            id="last_name" 
+            autocomplete="last_name" 
+            placeholder="Enter Last Name" 
+            required>
+          </div>
+           <!--end of lastname-->
+
+           <!--contact-->
+          <div class="mb-3">
+            <label for="exampleInputContact1" class="form-label">Cellphone no.</label>
+            <input 
+            type="number" 
+            class="form-control"  
+            name="phone_number" 
+            id="phone_number" 
+            autocomplete="number" 
+            placeholder="Enter Cellphone no." 
+            required>
+          </div>
+           <!--end of contact-->
+
+           <!--fb link-->
+          <div class="mb-3">
+            <label for="exampleInputfblink1" class="form-label">facebook link</label>
+            <input 
+            type="text" 
+            class="form-control"  
+            name="social_link" 
+            id="social_link" 
+            autocomplete="text" 
+            placeholder="Enter fb link" 
+            required>
+          </div>
+           <!--end of fb link-->
+
+           <!--email-->
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input 
+            type="email" 
+            class="form-control" 
+            name="email"  
+            id="email" 
+            placeholder="Enter Email" 
+            required>
+          </div>
+            <!--end of email-->
+
+             <!--password-->
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input 
+            type="password" 
+            class="form-control" 
+            name="password" 
+            id="password" 
+            autocomplete="password" 
+            placeholder="Enter Password" 
+            required>
+          </div>
+          <!--end of password-->
+
+           <!--confirm password-->
+          <div class="mb-3">
+            <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+            <input 
+            type="password" 
+            class="form-control" 
+            name="password_confirmation" 
+            id="password_confirmation" 
+            autocomplete="password_confirmation" 
+            placeholder="Confirm Password" 
+            required 
+            minlength="8">
+          </div>
+          <!--end of confirm password-->
+
+          <button type="submit" class="btn mt-4 text-light rounded-pill">Register</button>
+          <div class="login text-center mt-2">
+            <small>Already have an account? <a href="login.html" class="fw-bolder">Log-in instead</a></small>
+          </div> 
+        </form>
+  </div>      
+</body>
+</html>
