@@ -1,8 +1,8 @@
 import { supabase, successNotification, errorNotification, doLogout } from "../main";
 
 // Get Image URL
-const ProductImageUrl = "https://znurbodoeuuhqkgdxvql.supabase.co/storage/v1/object/public/images/";
-const profile_img_url ="https://znurbodoeuuhqkgdxvql.supabase.co/storage/v1/object/public/users_image/";
+const ProductImageUrl = "https://cipijlbikazyqbmuknek.supabase.co/storage/v1/object/public/images/";
+const profile_img_url ="https://cipijlbikazyqbmuknek.supabase.co/storage/v1/object/public/users_image/";
 
 
 const btn_logout = document.getElementById("btn_logout");
@@ -211,7 +211,7 @@ async function getDatas(keyword = "", category = "") {
                 <div class="card-head">
                 <div class="profile-info ms-3">
                     <a href="stalk.html?user_id=${product.user_information.user_id}">
-                        <img id="prof_pic" src="${profile_img_url + product.user_information.profile_pic}" alt="Profile Image">
+                        <img id="prof_pic" src="${profile_img_url + product.user_information.profile_pic}" alt="Profile Image" crossorigin="anonymous">
                     </a>
                     <a href="stalk.html?user_id=${product.user_information.user_id}">
                         <span id="user_name">${product.user_information.first_name} ${product.user_information.last_name}</span>
@@ -227,7 +227,7 @@ async function getDatas(keyword = "", category = "") {
                     </ul>
                 </div>
                 </div>
-                <img id="photo" src="${ProductImageUrl + product.image_path}" alt="">
+                <img id="photo" src="${ProductImageUrl + product.image_path}" alt="" crossorigin="anonymous">
                 <div class="card-body">
                 <h3 class="text-center">${product.product_name}</h3>
                 <p class="text-center">${product.description}</p>

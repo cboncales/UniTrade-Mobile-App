@@ -3,8 +3,8 @@ import { supabase, successNotification, errorNotification, doLogout } from "../m
 const btn_logout = document.getElementById("btn_logout");
 btn_logout.onclick = doLogout;
 
-const itemsImageUrl = "https://znurbodoeuuhqkgdxvql.supabase.co/storage/v1/object/public/images/";
-const profile_img_url = 'https://znurbodoeuuhqkgdxvql.supabase.co/storage/v1/object/public/users_image/';
+const itemsImageUrl = "https://cipijlbikazyqbmuknek.supabase.co/storage/v1/object/public/images/";
+const profile_img_url = 'https://cipijlbikazyqbmuknek.supabase.co/storage/v1/object/public/users_image/';
 
 document.addEventListener("DOMContentLoaded", () => {
     const userId = localStorage.getItem("user_id");
@@ -32,7 +32,7 @@ async function getDatas(userId) {
         if (userInfo) {
             const container = `
                 <div class="img__container" id="profile_pic">
-                    <img src="${profile_img_url + userInfo.profile_pic}" alt="">
+                    <img src="${profile_img_url + userInfo.profile_pic}" alt="" crossorigin="anonymous">
                     <span></span>
                 </div>
                 <br><br>
@@ -98,7 +98,7 @@ async function getUserPosts(userId) {
                           </ul>
                         </div>
                         <div class="card-head">
-                            <img id="photo" src="${itemsImageUrl + product.image_path}" alt="">
+                            <img id="photo" src="${itemsImageUrl + product.image_path}" alt="" crossorigin="anonymous">
                         </div>
                         <div class="card-body">
                             <h3 class="text-center">${product.product_name}</h3>

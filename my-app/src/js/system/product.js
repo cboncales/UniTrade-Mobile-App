@@ -149,12 +149,12 @@ async function getDatas(keyword = "", category = "") {
                         </div>
                         <small class="fw-bold ">posted by: ${product.first_name} ${product.last_name}</small>
                         <div class="img__container" id="profile_pic">
-                        <img src="${profile_img_url  + product.profile_pic}" alt="notfound">
+                        <img src="${profile_img_url  + product.profile_pic}" alt="notfound" crossorigin="anonymous">
                         <span></span>
                     </div>
 
                         <div class="img__container" id="profile_pic">
-                            <img src="${ProductImageUrl + product.image_path}" alt="Image not found">
+                            <img src="${ProductImageUrl + product.image_path}" alt="Image not found" crossorigin="anonymous">
                             <span></span>
                         </div>
                         <div class="card-body">

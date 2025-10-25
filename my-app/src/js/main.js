@@ -13,7 +13,7 @@ import { setRouter } from './router/router.js';
    setRouter();
 
 // Create a single supabase client for interacting with your database
-const supabase = createClient('https://znurbodoeuuhqkgdxvql.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpudXJib2RvZXV1aHFrZ2R4dnFsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTMyMjM2NTYsImV4cCI6MjAyODc5OTY1Nn0.7Kk9i6k-qRvhMqgOhH4ZI01afzwg4nbj1boFr_k6xO0')
+const supabase = createClient('https://cipijlbikazyqbmuknek.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNpcGlqbGJpa2F6eXFibXVrbmVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEzNjU1MDgsImV4cCI6MjA3Njk0MTUwOH0.XzU1sMOiBUNcRY17W5jG8S1bYAaDi4-995mOBq-eOIk')
 
 //export { supabase };
 
