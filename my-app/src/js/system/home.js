@@ -91,13 +91,24 @@ post_product.onsubmit = async (e) => {
             
     const user_info_id = userInfo.id;
 
+    // Helper function to sanitize filename
+    const sanitizeFilename = (filename) => {
+        const timestamp = Date.now();
+        const extension = filename.substring(filename.lastIndexOf('.'));
+        const nameWithoutExt = filename.substring(0, filename.lastIndexOf('.'));
+        // Remove special characters, spaces, and replace with underscores
+        const sanitized = nameWithoutExt.replace(/[^a-zA-Z0-9]/g, '_');
+        return `${sanitized}_${timestamp}${extension}`;
+    };
+
     // Upload Product Image
     const image = formData.get("image_path");
+    const sanitizedImageName = sanitizeFilename(image.name);
 
     const { data, error } = await supabase
         .storage
         .from('images')
-        .upload("public/" + image.name, image, {
+        .upload("public/" + sanitizedImageName, image, {
             cacheControl: '3600',
             upsert: true,
         });

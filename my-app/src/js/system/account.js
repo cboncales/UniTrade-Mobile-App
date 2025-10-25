@@ -58,13 +58,24 @@ form.addEventListener('submit', async function (event) {
     let profileImagePath = userData.profile_pic;
     let backgroundImagePath = userData.bg_pic;
 
+    // Helper function to sanitize filename
+    const sanitizeFilename = (filename) => {
+        const timestamp = Date.now();
+        const extension = filename.substring(filename.lastIndexOf('.'));
+        const nameWithoutExt = filename.substring(0, filename.lastIndexOf('.'));
+        // Remove special characters, spaces, and replace with underscores
+        const sanitized = nameWithoutExt.replace(/[^a-zA-Z0-9]/g, '_');
+        return `${sanitized}_${timestamp}${extension}`;
+    };
+
     // Upload the new profile image if a file is selected
     if (profileImageFile && profileImageFile.name) {
         try {
+            const sanitizedFilename = sanitizeFilename(profileImageFile.name);
             const { data: imageData, error: imageError } = await supabase
                 .storage
-                .from("images")
-                .upload(`public/${profileImageFile.name}`, profileImageFile, {
+                .from("users_image")
+                .upload(`public/${sanitizedFilename}`, profileImageFile, {
                     cacheControl: '3600',
                     upsert: true,
                 });
@@ -87,10 +98,11 @@ form.addEventListener('submit', async function (event) {
     // Upload the new background image if a file is selected
     if (backgroundImageFile && backgroundImageFile.name) {
         try {
+            const sanitizedFilename = sanitizeFilename(backgroundImageFile.name);
             const { data: imageData, error: imageError } = await supabase
                 .storage
                 .from("images")
-                .upload(`public/${backgroundImageFile.name}`, backgroundImageFile, {
+                .upload(`public/${sanitizedFilename}`, backgroundImageFile, {
                     cacheControl: '3600',
                     upsert: true,
                 });
