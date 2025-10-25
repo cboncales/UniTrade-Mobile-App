@@ -31,11 +31,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     userData = fetchedUserData; // Assign fetched user data to userData
 
-    // Populate form fields with user data
+    // Populate form fields with user data (Note: File inputs cannot be set programmatically for security reasons)
     document.getElementById('first_name').value = userData.first_name;
     document.getElementById('last_name').value = userData.last_name;
-    document.getElementById('profile_pic').value = userData.profile_pic;
-    document.getElementById('background_pic').value = userData.bg_pic; // Added line for background picture
+    // Don't set file input values - browsers prevent this for security
 });
 
 // Event listener for form submission
@@ -88,7 +87,7 @@ form.addEventListener('submit', async function (event) {
 
         } catch (error) {
             console.error('Error uploading profile image:', error.message);
-            errorNotification("Something went wrong while uploading the profile image", 5);
+            errorNotification("Something went wrong while uploading the profile image: " + error.message, 5);
             submitButton.disabled = false;
             submitButton.innerHTML = 'Save Changes';
             return;

@@ -4,8 +4,8 @@ const btn_logout = document.getElementById("btn_logout");
 btn_logout.onclick = doLogout;
 
 // Constants
-const ProductImageUrl = 'https://smqftzwqdgfqxjuiwkrg.supabase.co/storage/v1/object/public/products/';
-const profile_img_url ='https://smqftzwqdgfqxjuiwkrg.supabase.co/storage/v1/object/public/profile/';
+const ProductImageUrl = 'https://cipijlbikazyqbmuknek.supabase.co/storage/v1/object/public/images/';
+const profile_img_url ='https://cipijlbikazyqbmuknek.supabase.co/storage/v1/object/public/users_image/';
 
 // Logout functionality
 document.getElementById("btn_logout").onclick = doLogout;
@@ -51,7 +51,7 @@ document.getElementById("post_product").onsubmit = async (e) => {
         const sanitizedImageName = sanitizeFilename(image.name);
         const { data: imageUploadData, error: imageUploadError } = await supabase
             .storage
-            .from('products')
+            .from('images')
             .upload("public/" + sanitizedImageName, image, {
                 cacheControl: '3600',
                 upsert: true,
